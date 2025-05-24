@@ -1,12 +1,25 @@
-# React + Vite
+# ToDo List - приложение на React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Приложение ToDo List с поддержкой адаптивного дизайна, мультиязычности и темной/светлой темы.
 
-Currently, two official plugins are available:
+## Основные возможности
+- **Адаптивный дизайн:** приложение корректно отображается как на компьютерах, так и на мобильных устройствах.
+- **Добавление задач с описанием и датой:** можно указывать цель задачи и выбирать дату выполнения через календарь.
+- **Фильтрация задач:** отображение всех, активных или выполненных задач.
+- **Тёмная и светлая темы:** переключение между двумя визуальными режимами.
+- **Сохранение данных:** все задачи сохраняются в localStorage и сохраняются при перезагрузке страницы.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Технологии
+- React 18
+- Vite
+- Redux Toolkit (если используется)
+- react-i18next (для поддержки нескольких языков)
+- CSS Modules / Styled Components
+- Использование календаря для выбора даты
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Запуск проекта
+```bash
+git clone https://github.com/sadir5ek/todolist.git
+cd todolist
+npm install
+npm run dev
