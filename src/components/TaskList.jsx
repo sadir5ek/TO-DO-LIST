@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import TaskItem from './TaskItem'; // ✅ Туура импорт
+import TaskItem from './TaskItem'; 
 import '../styles/TaskList.css';
 
 function TaskList({ tasks, toggleStatus, openModal, deleteTask }) {
