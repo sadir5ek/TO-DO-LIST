@@ -1,0 +1,156 @@
+.task-item {
+  padding: 20px;
+  margin-bottom: 16px;
+  border-radius: 16px;
+  background: var(--task-bg);
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--task-border);
+}
+
+.light .task-item {
+  --task-bg: #ffffff;
+  --task-border: #e3e8f0;
+}
+
+.dark .task-item {
+  --task-bg: #1e1f22;
+  --task-border: #2b2c2f;
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.04);
+}
+
+.task-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.task-checkbox {
+  accent-color: #5b4dff;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.task-details {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 8px;
+  cursor: pointer;
+}
+
+.task-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--task-title);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.light .task-title {
+  --task-title: #1a1a1a;
+}
+
+.dark .task-title {
+  --task-title: #f5f5f5;
+}
+
+.task-title.done {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.task-arrow {
+  font-size: 18px;
+  color: #aaa;
+  transition: transform 0.3s ease;
+}
+
+.task-arrow.rotated {
+  transform: rotate(180deg);
+}
+
+.task-extra-wrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+}
+
+.task-extra-wrapper.expanded {
+  max-height: 300px;
+  opacity: 1;
+  margin-top: 12px;
+}
+
+.task-extra-info {
+  padding-top: 10px;
+  border-top: 1px solid var(--task-border);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.task-description,
+.task-due-date {
+  font-size: 15px;
+  color: var(--task-subtext);
+  margin: 0;
+}
+
+.light .task-description,
+.light .task-due-date {
+  --task-subtext: #5f6b7a;
+}
+
+.dark .task-description,
+.dark .task-due-date {
+  --task-subtext: #b4b8c2;
+}
+
+.task-due-date::before {
+  content: "📅 ";
+}
+
+.task-actions {
+  display: flex;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.edit-button,
+.delete-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 17px;
+  padding: 6px;
+  border-radius: 8px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.edit-button {
+  color: #5b4dff;
+}
+
+.edit-button:hover {
+  color: #7c6fff;
+  transform: scale(1.1);
+}
+
+.delete-button {
+  color: #ff5f5f;
+}
+
+.delete-button:hover {
+  color: #ff3b3b;
+  transform: scale(1.1);
+}
